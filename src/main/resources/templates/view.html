@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Participation check</title>
+    </head>
+    <body>
+            <!-- User's address is visible -> sensitive data exposure -->
+            <div th:if="${signup != null}" ><span th:utext="${signup.name}"/> from <span th:utext="${signup.address}"/> is participating</div>
+            <div th:unless="${signup != null}"><span>Participant not found</span></div>
+        <p></p>
+    </body>
+</html>
